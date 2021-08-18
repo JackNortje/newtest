@@ -33,7 +33,7 @@ function getResult () {
       (computerChoice === 'paper' && userChoice === 'rock')) {
       result = 'You lost !!'
 } 
-   if (computerChoice === userChoice) {
+   else if (computerChoice === userChoice) {
    result = 'Its a tie !!'
 }
    else {

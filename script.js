@@ -41,3 +41,8 @@ function getResult () {
 }
 resultDisplay.innerHTML = result
 };
+
+function restart () {
+   location.reload();
+   return false;
+}

@@ -2,6 +2,7 @@ const computerChoiceDisplay = document.getElementById('computer-choice')
 const userChoiceDisplay = document.getElementById('user-choice')
 const resultDisplay = document.getElementById('result')
 const possibleChoices = document.querySelectorAll('button')
+let scoreTally = document.querySelector('p')
 let userChoice 
 let result
 
@@ -16,33 +17,35 @@ function generateComputerChoices () {
    const randomNumber = Math.floor(Math.random() * possibleChoices.length ) +1
 
    if (randomNumber === 1) {
-      computerChoice = 'rock'
+      computerChoice = 'ROCK'
    }
    if (randomNumber === 2) {
-      computerChoice = 'paper'
+      computerChoice = 'PAPER'
    } 
    if (randomNumber === 3) {
-      computerChoice = 'scissors'
+      computerChoice = 'SCISSORS'
    }
-   computerChoiceDisplay.innerHTML = computerChoice
+   computerChoiceDisplay.textContent = computerChoice
 }
 
 function getResult () {
-   if ((computerChoice === 'rock' && userChoice === 'scissors') ||
-      (computerChoice === 'scissors' && userChoice === 'paper') ||
-      (computerChoice === 'paper' && userChoice === 'rock')) {
-      result = 'You lost !!'
+   if ((computerChoice === 'ROCK' && userChoice === 'SCISSORS') ||
+      (computerChoice === 'SCISSORS' && userChoice === 'PAPER') ||
+      (computerChoice === 'PAPER' && userChoice === 'ROCK')) {
+         result = 'You lost that one'
 } 
    else if (computerChoice === userChoice) {
    result = 'Its a tie !!'
 }
    else {
-   result = 'YOU WON !!!'
+   result = 'YOU WON !!!' 
 }
 resultDisplay.innerHTML = result
 };
+
 
 function restart () {
    location.reload();
    return false;
 }
+

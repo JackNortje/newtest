@@ -1,15 +1,21 @@
+
+
 html {
     background: white;
     font-family: Arial, Helvetica, sans-serif;
     height: 100vh;
     
 }
+body {
+    margin: 0;
+}
 .page-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: lightskyblue;
+    background-color: darkgray;
     height: 100%;
+    
     
 }
 .page-wrapper .headings {
@@ -17,7 +23,12 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 180px;
+    margin-top: 50px;
+}
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    color:white;
 }
 h2{
     font-family: Arial, Helvetica, sans-serif;
@@ -38,4 +49,42 @@ button {
     border: 1px solid black;
     font-size: 20px;
     margin-top: 30px;
+    margin-top: 50px;
+}
+#rock {
+    font-size: 100px;
+    background-color: darkgray;
+    border: none;
+    margin-right: 20px;
+}
+#paper {
+    font-size: 100px;
+    background-color: darkgray;
+    border: none;
+    margin-right: 20px;
+}
+#scissors {
+    font-size: 100px;
+    background-color: darkgray;
+    border: none;
+}
+button:hover { 
+    transform: scale(1.3); 
+    cursor: pointer;
+}
+.result-list {
+    display: flex;
+    flex-direction: row;
+    align-self: ;
+    margin-top: 40px;
+
+}
+.result-list .player-score {
+    font-size: 20px;
+    margin-right: 100px;
+    color: white;
+}
+.result-list .computer-score {
+    font-size: 20px;
+    color: white;
 }
